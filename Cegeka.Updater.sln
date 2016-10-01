@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cegeka.Updater.Logic", "Cegeka.Updater.Logic\Cegeka.Updater.Logic.csproj", "{3175466E-7DEB-47C8-A320-3A3F9D2D1AB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cegeka.Updater.Tests", "Cegeka.Updater.Tests\Cegeka.Updater.Tests.csproj", "{4090E29F-ABD3-4834-A8D6-0E34E6201ADC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{ADAAF987-8FD2-4352-B255-873ADE4EDCB0}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cegeka.Updater.Service", "Cegeka.Updater.Service\Cegeka.Updater.Service.csproj", "{246EA548-34A3-42C4-8B87-41AE799A03AE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{28C66559-B21B-436C-82C4-92A24222CC58}"
+	ProjectSection(SolutionItems) = preProject
+		Database\ReportTable.sql = Database\ReportTable.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://andreiciobanu.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Cegeka.Updater.Logic\\Cegeka.Updater.Logic.csproj
+		SccProjectName1 = Cegeka.Updater.Logic
+		SccLocalPath1 = Cegeka.Updater.Logic
+		SccProjectUniqueName2 = Cegeka.Updater.Tests\\Cegeka.Updater.Tests.csproj
+		SccProjectName2 = Cegeka.Updater.Tests
+		SccLocalPath2 = Cegeka.Updater.Tests
+		SccProjectUniqueName3 = Cegeka.Updater.Service\\Cegeka.Updater.Service.csproj
+		SccProjectName3 = Cegeka.Updater.Service
+		SccLocalPath3 = Cegeka.Updater.Service
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3175466E-7DEB-47C8-A320-3A3F9D2D1AB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3175466E-7DEB-47C8-A320-3A3F9D2D1AB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3175466E-7DEB-47C8-A320-3A3F9D2D1AB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3175466E-7DEB-47C8-A320-3A3F9D2D1AB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4090E29F-ABD3-4834-A8D6-0E34E6201ADC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4090E29F-ABD3-4834-A8D6-0E34E6201ADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4090E29F-ABD3-4834-A8D6-0E34E6201ADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4090E29F-ABD3-4834-A8D6-0E34E6201ADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246EA548-34A3-42C4-8B87-41AE799A03AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246EA548-34A3-42C4-8B87-41AE799A03AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246EA548-34A3-42C4-8B87-41AE799A03AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246EA548-34A3-42C4-8B87-41AE799A03AE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

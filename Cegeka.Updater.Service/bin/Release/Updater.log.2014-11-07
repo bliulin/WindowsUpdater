@@ -1,0 +1,24 @@
+2014-11-07 00:22:04,919 [9] INFO  Cegeka.Updater.Service.Program (null) - Starting Cegeka Update Service Console host.
+2014-11-07 00:22:12,184 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - START runUpdateProcedure
+2014-11-07 00:22:13,922 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Reading central configuration.
+2014-11-07 00:22:33,937 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Going idle - Not within maintenance timeframe.
+2014-11-07 00:23:24,700 [9] INFO  Cegeka.Updater.Service.Program (null) - Starting Cegeka Update Service Console host.
+2014-11-07 00:23:26,487 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - START runUpdateProcedure
+2014-11-07 00:23:27,690 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Reading central configuration.
+2014-11-07 00:23:36,338 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Going idle - Not within maintenance timeframe.
+2014-11-07 00:23:37,236 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - FINISH runUpdateProcedure
+2014-11-07 00:24:21,940 [9] INFO  Cegeka.Updater.Service.Program (null) - Starting Cegeka Update Service Console host.
+2014-11-07 00:24:23,728 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - START runUpdateProcedure
+2014-11-07 00:24:24,553 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Reading central configuration.
+2014-11-07 00:26:35,835 [9] INFO  Cegeka.Updater.Service.Program (null) - Starting Cegeka Update Service Console host.
+2014-11-07 00:26:37,329 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - START runUpdateProcedure
+2014-11-07 00:26:38,169 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Reading central configuration.
+2014-11-07 00:26:42,163 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Going idle - Not within maintenance timeframe.
+2014-11-07 00:26:42,907 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - FINISH runUpdateProcedure
+2014-11-07 00:26:55,334 [10] INFO  Cegeka.Updater.Service.Program (null) - Starting Cegeka Update Service Console host.
+2014-11-07 00:26:57,207 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - START runUpdateProcedure
+2014-11-07 00:26:57,985 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Reading central configuration.
+2014-11-07 00:28:20,931 [9] INFO  Cegeka.Updater.Service.Program (null) - Starting Cegeka Update Service Console host.
+2014-11-07 00:28:23,495 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - START runUpdateProcedure
+2014-11-07 00:28:24,364 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Reading central configuration.
+2014-11-07 00:28:27,254 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Fetching available updates.

@@ -1,0 +1,13 @@
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\obj\Debug\Cegeka.Updater.Logic.csprojResolveAssemblyReference.cache
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\obj\Debug\Interop.WUApiLib.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\obj\Debug\Cegeka.Updater.Logic.csproj.ResolveComReference.cache
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\bin\Debug\Cegeka.Updater.Logic.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\bin\Debug\Cegeka.Updater.Logic.pdb
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\bin\Debug\log4net.xml
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\bin\Debug\Microsoft.Practices.Unity.xml
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\bin\Debug\Microsoft.Practices.Unity.Configuration.xml
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\bin\Debug\Microsoft.Practices.Unity.Interception.xml
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\bin\Debug\Microsoft.Practices.Unity.Interception.Configuration.xml
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\bin\Debug\Interop.WUApiLib.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\obj\Debug\Cegeka.Updater.Logic.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\obj\Debug\Cegeka.Updater.Logic.pdb

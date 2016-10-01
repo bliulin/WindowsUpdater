@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfUpdateInstallationLogEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2015-12-02T17:27:21.205905Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2015-12-02T17:27:21.205905Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2015-12-02T22:27:31.1617865Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2015-12-02T22:27:31.1617865Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2015-12-02T22:29:50.1917843Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2015-12-02T22:29:50.1917843Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2015-12-02T22:32:38.9215235Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2015-12-02T22:32:38.9215235Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2015-12-02T22:34:26.6587213Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2015-12-02T22:34:26.6587213Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2015-12-03T07:24:05.7055424Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2015-12-03T07:24:05.7055424Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2015-12-03T07:56:30.7594176Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2015-12-03T07:56:30.7594176Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2015-12-03T07:59:46.7726906Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2015-12-03T07:59:46.7726906Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2015-12-03T08:02:24.7598206Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2015-12-03T08:02:24.7598206Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2015-12-03T08:02:35.5874511Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2015-12-03T08:02:35.5874511Z" />
+</ArrayOfUpdateInstallationLogEntry>

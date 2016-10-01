@@ -1,0 +1,6 @@
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\UpdaterSetup\bin\Debug\en-us\UpdaterSetup.msi
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\UpdaterSetup\bin\Debug\en-us\UpdaterSetup.wixpdb
+obj\Debug\Product.wixobj
+obj\Debug\Cegeka.Updater.Setup.wixproj.BindContentsFileListen-us.txt
+obj\Debug\Cegeka.Updater.Setup.wixproj.BindOutputsFileListen-us.txt
+obj\Debug\Cegeka.Updater.Setup.wixproj.BindBuiltOutputsFileListen-us.txt

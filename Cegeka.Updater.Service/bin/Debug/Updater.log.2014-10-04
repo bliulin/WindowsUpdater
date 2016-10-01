@@ -1,0 +1,190 @@
+INFO 9 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 9 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - No maintenance timeframe is configured for group 'Development'
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - Going idle - Not within maintenance timeframe.
+INFO 7 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+DEBUG 8 Cegeka.Updater.Logic.UpdateController - No maintenance timeframe is configured for group 'Development'
+DEBUG 8 Cegeka.Updater.Logic.UpdateController - Going idle - Not within maintenance timeframe.
+ERROR 11 Cegeka.Updater.Logic.UpdateController - System.Configuration.ConfigurationErrorsException: Maintenance end date for group 'Development' is not in the correct format.
+   at Cegeka.Updater.Logic.UpdateController.isWithinMaintenanceTimeFrame() in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\UpdateController.cs:line 306
+   at Cegeka.Updater.Logic.UpdateController.runUpdateProcedure() in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\UpdateController.cs:line 114
+INFO 8 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 8 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 9 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 10 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+ERROR 11 Cegeka.Updater.Logic.UpdateController - System.Runtime.InteropServices.COMException (0x80240037): Exception from HRESULT: 0x80240037
+   at WUApiLib.UpdateCollectionClass.RemoveAt(Int32 index)
+   at Cegeka.Updater.Logic.UpdateController.runUpdateProcedure() in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\UpdateController.cs:line 134
+INFO 8 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+ERROR 9 Cegeka.Updater.Logic.UpdateController - System.Runtime.InteropServices.COMException (0x80240037): Exception from HRESULT: 0x80240037
+   at WUApiLib.UpdateCollectionClass.RemoveAt(Int32 index)
+   at Cegeka.Updater.Logic.UpdateController.runUpdateProcedure() in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\UpdateController.cs:line 134
+INFO 9 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 10 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 8 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 10 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+DEBUG 11 Cegeka.Updater.Logic.UpdateController - START runUpdateProcedure
+DEBUG 11 Cegeka.Updater.Logic.UpdateController - Reading central configuration.
+DEBUG 11 Cegeka.Updater.Logic.UpdateController - Fetching available updates.
+DEBUG 11 Cegeka.Updater.Logic.UpdateController - Writing event log and monitoring API call.
+DEBUG 11 Cegeka.Updater.Logic.UpdateController - Installing updates.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - START InstallUpdates
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Downloading the following updates:
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '230b82d1-3abd-471a-a4f9-23f97fb857d9', Title = 'Microsoft Visual Studio 2010 Service Pack 1'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'f278f751-8670-477e-8dbb-f5c4deaf5ea6', Title = 'Microsoft SQL Server 2008 Service Pack 3 (KB2546951)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='230b82d1-3abd-471a-a4f9-23f97fb857d9', Title='Microsoft Visual Studio 2010 Service Pack 1' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='f278f751-8670-477e-8dbb-f5c4deaf5ea6', Title='Microsoft SQL Server 2008 Service Pack 3 (KB2546951)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='db2fa9a5-e42d-45f8-a853-b0ca36aedcf8', Title='Microsoft SQL Server 2012 Service Pack 2 (KB2958429)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='e21270a2-e678-4180-8bcb-3b39fa9ad0fe', Title='Update for Microsoft Visual Studio 2010 Tools for Office Runtime (KB2961149)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='f33c72f9-16e4-4f00-92df-32c2b8170516', Title='Update for Microsoft Lync 2013 (KB2881083) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='f7133423-b571-4575-8cbd-0146c5f02701', Title='Update for Microsoft Office 2013 (KB2883036) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='3d42a992-1db5-4834-9ab9-a6ebd55eb932', Title='Update for Microsoft Office 2013 (KB2883049) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='e6974441-2027-4e15-b4f5-8d9f6db29e7a', Title='Update for Microsoft Office 2013 (KB2883060) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='7dd26094-ff54-47ca-80ce-3e1874e87ec6', Title='Update for Microsoft OneDrive for Business (KB2883066) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='13a71888-ffa0-45c8-b8f4-cc5dfdcd7f0a', Title='Security Update for Microsoft Office 2010 (KB2881071) 32-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='e3f588e3-d836-4e9d-898a-03ec65d30225', Title='Update for Windows 8.1 for x64-based Systems (KB2979500)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='7f5ba6c2-7eb9-43e9-96d5-f2ae296b3b16', Title='Cumulative Security Update for Internet Explorer 11 for Windows 8.1 for x64-based Systems (KB2976627)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='02b62bb0-33b2-4585-8945-0f0a711b909e', Title='Security Update for Microsoft .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2966826)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='81db841b-931d-4e1c-ba39-6ec7e284b69f', Title='Security Update for Windows 8.1 for x64-based Systems (KB2918614)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='c201a8bc-5e38-451c-9e4c-259be947c7ce', Title='Security Update for Windows 8.1 for x64-based Systems (KB2976897)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='94e1c9b6-fb83-4cd8-8a04-1ec25c90837b', Title='Security Update for Windows 8.1 for x64-based Systems (KB2978668)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='e2df462d-8f6a-4e70-937b-8b79a98bde63', Title='Update for Windows 8.1 for x64-based Systems (KB2981580)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='ead8176f-4d21-4567-a5b4-c29a0598744f', Title='Update for Windows 8.1 for x64-based Systems (KB2962409)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='ad2a7a36-f59e-4d14-ab97-40aaa1458b97', Title='Update for Windows 8.1 for x64-based Systems (KB2967917)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='1af12a30-7716-4d80-9c9d-8fe415c3c761', Title='Update for Windows 8.1 for x64-based Systems (KB2971239)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='657515a5-88b7-41d2-801b-f855d2c9900c', Title='Update for Windows 8.1 for x64-based Systems (KB2981655)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='214341b3-6b9b-41ad-a01c-bd75ff0a2f67', Title='Security Update for Windows 8.1 for x64-based Systems (KB2993651)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='62bc444d-add5-4f5b-a1c2-1192c11c50b8', Title='Update for Microsoft Office 2013 (KB2881081) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='c1f7bc97-3513-4d4e-ae1c-520b93737621', Title='Update for Microsoft Lync 2013 (KB2889860) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='36d777e4-b473-4947-aebb-7d387d3b378a', Title='Update for Microsoft Office 2013 (KB2881001) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='a6cf6f8c-3415-4b5b-950f-8da81e1b7305', Title='Definition Update for Microsoft Office 2010 (KB982726) 32-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='52da4101-2278-4ae5-bdfa-a7234aaa31a9', Title='Update for Microsoft Office 2013 (KB2889862) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='9402d863-2433-4f04-96ad-c78ac0d8d962', Title='Definition Update for Microsoft Office 2013 (KB2760587) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='0f3b7a01-583c-439c-ab6e-cbbdfd50a44f', Title='Update for Microsoft Excel 2010 (KB2889836) 32-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='b6cece7c-4ed8-4660-85c8-d2b447928935', Title='Update for Microsoft Office 2013 (KB2889848) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='83f26113-c098-4cc1-8731-df6987eb784c', Title='Update for Microsoft Word 2013 (KB2889852) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='a685539d-47e9-4047-b807-e94f435adc85', Title='Update for Microsoft Office 2013 (KB2881039) 64-Bit Edition' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='15d2ed04-1eb8-4e57-9e87-04c53ff227a0', Title='Security Update for Microsoft .NET Framework 4.5.1 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2894856)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='74f15387-bc02-48be-afda-32caa8940bc7', Title='Security Update for Microsoft .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2973114)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='1c473613-7979-4195-b4d0-428d8a353b53', Title='Cumulative Security Update for Internet Explorer 11 for Windows 8.1 for x64-based Systems (KB2977629)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='18ebcf52-c8c6-48e0-b7ad-4bda18ba6fda', Title='Security Update for Internet Explorer Flash Player for Windows 8.1 for x64-based Systems (KB2987114)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='228676f3-8545-444c-a7e0-4df7b9c2b4d6', Title='Security Update for Microsoft .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2972213)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='ced67375-e431-4a8b-9245-52386c04f674', Title='Security Update for Microsoft .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2966828)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='9e059209-e554-4892-be02-bb13a243020c', Title='Security Update for Microsoft .NET Framework 4.5.1 and 4.5.2 on Windows 8.1 and Windows Server 2012 R2 x64-based Systems (KB2977765)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='6cc76d9a-5347-4d73-8c4e-be490fcf5bab', Title='Security Update for Windows 8.1 for x64-based Systems (KB2988948)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='9fed22fc-cdd2-4724-8463-c08f21de6196', Title='Update for Windows 8.1 for x64-based Systems (KB2975719)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='0e8610f7-e34b-46a9-a8e1-c260f2ad78ca', Title='Update for Windows 8.1 for x64-based Systems (KB2989647)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='5be19a8d-c6d0-487e-90ea-cbd29982ef68', Title='Security Update for Microsoft .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2894852)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='38d11a77-95ea-4800-a186-e001e6ee25bf', Title='Update for Windows 8.1 for x64-based Systems (KB2984006)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='cc5d4b11-6379-4e81-957f-e2d8f80c0905', Title='Windows Malicious Software Removal Tool for Windows 8, 8.1 and Windows Server 2012, 2012 R2 x64 Edition - September 2014 (KB890830)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='cbf1983a-2c44-47d1-a594-072ef7ceeea1', Title='Update for Windows 8.1 for x64-based Systems (KB2990967)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='97551980-ad84-498e-9bc1-f84b67d3b2a9', Title='Update for Windows 8.1 for x64-based Systems (KB2998527)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Update ID='d527000a-12a8-481f-85d1-31b8a8cf6918', Title='Definition Update for Windows Defender - KB2267602 (Definition 1.185.2251.0)' was in the list of available updates but it was not downloaded.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Installing the following updates:
+INFO 10 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+DEBUG 11 Cegeka.Updater.Logic.UpdateController - START runUpdateProcedure
+DEBUG 11 Cegeka.Updater.Logic.UpdateController - Reading central configuration.
+DEBUG 11 Cegeka.Updater.Logic.UpdateController - Fetching available updates.
+DEBUG 11 Cegeka.Updater.Logic.UpdateController - Installing updates.
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - START InstallUpdates
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Downloading the following updates:
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient - Downloading the following updates:
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '230b82d1-3abd-471a-a4f9-23f97fb857d9', Title = 'Microsoft Visual Studio 2010 Service Pack 1'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'f278f751-8670-477e-8dbb-f5c4deaf5ea6', Title = 'Microsoft SQL Server 2008 Service Pack 3 (KB2546951)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'db2fa9a5-e42d-45f8-a853-b0ca36aedcf8', Title = 'Microsoft SQL Server 2012 Service Pack 2 (KB2958429)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'e21270a2-e678-4180-8bcb-3b39fa9ad0fe', Title = 'Update for Microsoft Visual Studio 2010 Tools for Office Runtime (KB2961149)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'f33c72f9-16e4-4f00-92df-32c2b8170516', Title = 'Update for Microsoft Lync 2013 (KB2881083) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'f7133423-b571-4575-8cbd-0146c5f02701', Title = 'Update for Microsoft Office 2013 (KB2883036) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '3d42a992-1db5-4834-9ab9-a6ebd55eb932', Title = 'Update for Microsoft Office 2013 (KB2883049) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'e6974441-2027-4e15-b4f5-8d9f6db29e7a', Title = 'Update for Microsoft Office 2013 (KB2883060) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '7dd26094-ff54-47ca-80ce-3e1874e87ec6', Title = 'Update for Microsoft OneDrive for Business (KB2883066) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '13a71888-ffa0-45c8-b8f4-cc5dfdcd7f0a', Title = 'Security Update for Microsoft Office 2010 (KB2881071) 32-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'e3f588e3-d836-4e9d-898a-03ec65d30225', Title = 'Update for Windows 8.1 for x64-based Systems (KB2979500)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '7f5ba6c2-7eb9-43e9-96d5-f2ae296b3b16', Title = 'Cumulative Security Update for Internet Explorer 11 for Windows 8.1 for x64-based Systems (KB2976627)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '02b62bb0-33b2-4585-8945-0f0a711b909e', Title = 'Security Update for Microsoft .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2966826)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '81db841b-931d-4e1c-ba39-6ec7e284b69f', Title = 'Security Update for Windows 8.1 for x64-based Systems (KB2918614)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'c201a8bc-5e38-451c-9e4c-259be947c7ce', Title = 'Security Update for Windows 8.1 for x64-based Systems (KB2976897)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '94e1c9b6-fb83-4cd8-8a04-1ec25c90837b', Title = 'Security Update for Windows 8.1 for x64-based Systems (KB2978668)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'e2df462d-8f6a-4e70-937b-8b79a98bde63', Title = 'Update for Windows 8.1 for x64-based Systems (KB2981580)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'ead8176f-4d21-4567-a5b4-c29a0598744f', Title = 'Update for Windows 8.1 for x64-based Systems (KB2962409)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'ad2a7a36-f59e-4d14-ab97-40aaa1458b97', Title = 'Update for Windows 8.1 for x64-based Systems (KB2967917)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '1af12a30-7716-4d80-9c9d-8fe415c3c761', Title = 'Update for Windows 8.1 for x64-based Systems (KB2971239)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '657515a5-88b7-41d2-801b-f855d2c9900c', Title = 'Update for Windows 8.1 for x64-based Systems (KB2981655)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '214341b3-6b9b-41ad-a01c-bd75ff0a2f67', Title = 'Security Update for Windows 8.1 for x64-based Systems (KB2993651)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '62bc444d-add5-4f5b-a1c2-1192c11c50b8', Title = 'Update for Microsoft Office 2013 (KB2881081) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'c1f7bc97-3513-4d4e-ae1c-520b93737621', Title = 'Update for Microsoft Lync 2013 (KB2889860) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '36d777e4-b473-4947-aebb-7d387d3b378a', Title = 'Update for Microsoft Office 2013 (KB2881001) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'a6cf6f8c-3415-4b5b-950f-8da81e1b7305', Title = 'Definition Update for Microsoft Office 2010 (KB982726) 32-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '52da4101-2278-4ae5-bdfa-a7234aaa31a9', Title = 'Update for Microsoft Office 2013 (KB2889862) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '9402d863-2433-4f04-96ad-c78ac0d8d962', Title = 'Definition Update for Microsoft Office 2013 (KB2760587) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '0f3b7a01-583c-439c-ab6e-cbbdfd50a44f', Title = 'Update for Microsoft Excel 2010 (KB2889836) 32-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'b6cece7c-4ed8-4660-85c8-d2b447928935', Title = 'Update for Microsoft Office 2013 (KB2889848) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '83f26113-c098-4cc1-8731-df6987eb784c', Title = 'Update for Microsoft Word 2013 (KB2889852) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'a685539d-47e9-4047-b807-e94f435adc85', Title = 'Update for Microsoft Office 2013 (KB2881039) 64-Bit Edition'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '15d2ed04-1eb8-4e57-9e87-04c53ff227a0', Title = 'Security Update for Microsoft .NET Framework 4.5.1 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2894856)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '74f15387-bc02-48be-afda-32caa8940bc7', Title = 'Security Update for Microsoft .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2973114)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '1c473613-7979-4195-b4d0-428d8a353b53', Title = 'Cumulative Security Update for Internet Explorer 11 for Windows 8.1 for x64-based Systems (KB2977629)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '18ebcf52-c8c6-48e0-b7ad-4bda18ba6fda', Title = 'Security Update for Internet Explorer Flash Player for Windows 8.1 for x64-based Systems (KB2987114)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '228676f3-8545-444c-a7e0-4df7b9c2b4d6', Title = 'Security Update for Microsoft .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2972213)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'ced67375-e431-4a8b-9245-52386c04f674', Title = 'Security Update for Microsoft .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2966828)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '9e059209-e554-4892-be02-bb13a243020c', Title = 'Security Update for Microsoft .NET Framework 4.5.1 and 4.5.2 on Windows 8.1 and Windows Server 2012 R2 x64-based Systems (KB2977765)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '6cc76d9a-5347-4d73-8c4e-be490fcf5bab', Title = 'Security Update for Windows 8.1 for x64-based Systems (KB2988948)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '9fed22fc-cdd2-4724-8463-c08f21de6196', Title = 'Update for Windows 8.1 for x64-based Systems (KB2975719)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '0e8610f7-e34b-46a9-a8e1-c260f2ad78ca', Title = 'Update for Windows 8.1 for x64-based Systems (KB2989647)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '5be19a8d-c6d0-487e-90ea-cbd29982ef68', Title = 'Security Update for Microsoft .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2 for x64-based Systems (KB2894852)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '38d11a77-95ea-4800-a186-e001e6ee25bf', Title = 'Update for Windows 8.1 for x64-based Systems (KB2984006)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'cc5d4b11-6379-4e81-957f-e2d8f80c0905', Title = 'Windows Malicious Software Removal Tool for Windows 8, 8.1 and Windows Server 2012, 2012 R2 x64 Edition - September 2014 (KB890830)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'cbf1983a-2c44-47d1-a594-072ef7ceeea1', Title = 'Update for Windows 8.1 for x64-based Systems (KB2990967)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '97551980-ad84-498e-9bc1-f84b67d3b2a9', Title = 'Update for Windows 8.1 for x64-based Systems (KB2998527)'
+DEBUG 11 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'd527000a-12a8-481f-85d1-31b8a8cf6918', Title = 'Definition Update for Windows Defender - KB2267602 (Definition 1.185.2251.0)'
+INFO 9 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - START runUpdateProcedure
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - Reading central configuration.
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - Fetching available updates.
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - Writing event log and monitoring API call.
+ERROR 6 Cegeka.Updater.Logic.UpdateController - System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  To create the source, you need permission to read all event logs to make sure that the new source name is unique.  Inaccessible logs: Security.
+   at System.Diagnostics.EventLog.FindSourceRegistration(String source, String machineName, Boolean readOnly, Boolean wantToCreate)
+   at System.Diagnostics.EventLog.SourceExists(String source, String machineName, Boolean wantToCreate)
+   at System.Diagnostics.EventLogInternal.VerifyAndCreateSource(String sourceName, String currentMachineName)
+   at System.Diagnostics.EventLogInternal.WriteEntry(String message, EventLogEntryType type, Int32 eventID, Int16 category, Byte[] rawData)
+   at System.Diagnostics.EventLog.WriteEntry(String source, String message, EventLogEntryType type, Int32 eventID, Int16 category, Byte[] rawData)
+   at System.Diagnostics.EventLog.WriteEntry(String source, String message, EventLogEntryType type, Int32 eventID)
+   at Cegeka.Updater.Logic.Utils.TaskHandler.WriteEventLog(Int32 eventLogId, String description) in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\Utils\TaskHandler.cs:line 23
+   at Cegeka.Updater.Logic.UpdateController.runUpdateProcedure() in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\UpdateController.cs:line 150
+The Zone of the assembly that failed was:
+MyComputer
+INFO 9 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - START runUpdateProcedure
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - Reading central configuration.
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - Fetching available updates.
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - Writing event log and monitoring API call.
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - Installing updates.
+DEBUG 6 Cegeka.Updater.Logic.Installation.UpdateClient - START InstallUpdates
+DEBUG 6 Cegeka.Updater.Logic.Installation.UpdateClient - Downloading the following updates:
+DEBUG 6 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = '230b82d1-3abd-471a-a4f9-23f97fb857d9', Title = 'Microsoft Visual Studio 2010 Service Pack 1'
+INFO 11 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+DEBUG 7 Cegeka.Updater.Logic.UpdateController - START runUpdateProcedure
+DEBUG 7 Cegeka.Updater.Logic.UpdateController - Reading central configuration.
+DEBUG 7 Cegeka.Updater.Logic.UpdateController - Fetching available updates.
+DEBUG 7 Cegeka.Updater.Logic.UpdateController - Writing event log and monitoring API call.
+DEBUG 7 Cegeka.Updater.Logic.UpdateController - Installing updates.
+DEBUG 7 Cegeka.Updater.Logic.Installation.UpdateClient - START InstallUpdates
+DEBUG 7 Cegeka.Updater.Logic.Installation.UpdateClient - Downloading the following updates:
+DEBUG 7 Cegeka.Updater.Logic.Installation.UpdateClient -   UpdateId = 'f33c72f9-16e4-4f00-92df-32c2b8170516', Title = 'Update for Microsoft Lync 2013 (KB2881083) 64-Bit Edition'
+DEBUG 7 Cegeka.Updater.Logic.Installation.UpdateClient - Installing the following updates:
+DEBUG 7 Cegeka.Updater.Logic.Installation.UpdateClient -   Update ID = 'f33c72f9-16e4-4f00-92df-32c2b8170516', Title = 'Update for Microsoft Lync 2013 (KB2881083) 64-Bit Edition', KB_Articles = '2881083'
+DEBUG 7 Cegeka.Updater.Logic.Installation.UpdateClient - END InstallUpdates
+DEBUG 7 Cegeka.Updater.Logic.UpdateController - END Installation report
+DEBUG 7 Cegeka.Updater.Logic.UpdateController - FINISH runUpdateProcedure
+INFO 9 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+DEBUG 10 Cegeka.Updater.Logic.UpdateController - START runUpdateProcedure
+DEBUG 10 Cegeka.Updater.Logic.UpdateController - Reading central configuration.
+DEBUG 10 Cegeka.Updater.Logic.UpdateController - Fetching available updates.
+DEBUG 10 Cegeka.Updater.Logic.UpdateController - Writing event log and monitoring API call.
+DEBUG 10 Cegeka.Updater.Logic.UpdateController - Installing updates.
+DEBUG 10 Cegeka.Updater.Logic.Installation.UpdateClient - START InstallUpdates
+DEBUG 10 Cegeka.Updater.Logic.Installation.UpdateClient - Downloading the following updates:
+ERROR 10 Cegeka.Updater.Logic.UpdateController - System.Runtime.InteropServices.COMException (0x80240024): Exception from HRESULT: 0x80240024
+   at WUApiLib.UpdateDownloaderClass.Download()
+   at Cegeka.Updater.Logic.Installation.UpdateClient.InstallUpdates(IUpdateCollection updates) in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\Installation\UpdateClient.cs:line 47
+   at Cegeka.Updater.Logic.UpdateController.runUpdateProcedure() in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\UpdateController.cs:line 154

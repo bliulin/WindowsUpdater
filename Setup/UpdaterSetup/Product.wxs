@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:iis="http://schemas.microsoft.com/wix/IIsExtension"
+     xmlns:sql="http://schemas.microsoft.com/wix/SqlExtension"
+     >
+
+  <?include Variables.wxi?>
+  <Product Id="$(var.PRODUCT_ID)"
+           UpgradeCode="$(var.PRODUCT_UPGRADECODE)"
+           Name="$(var.PRODUCT_FULL_NAME)"
+           Version="$(var.PRODUCT_VERSION)"
+           Manufacturer="$(var.MANUFACTURER_FULL_NAME)"
+           Language="!(loc.LANG)">
+
+    <Package InstallerVersion="200"
+             InstallScope="perMachine"
+             Compressed="yes"
+             InstallPrivileges="elevated"
+             Manufacturer="$(var.MANUFACTURER_FULL_NAME)"/>
+
+    <Media Id="1"
+           Cabinet="media.cab"
+           EmbedCab="yes"/>
+
+    <Upgrade Id="$(var.PRODUCT_UPGRADECODE)" >
+
+      <UpgradeVersion Property="OLDERVERSION_BEINGUPGRADED"
+                      Minimum="0.0.0"
+                      Maximum="$(var.PRODUCT_VERSION)"
+                      IncludeMaximum="no"
+                      OnlyDetect="no"
+                      MigrateFeatures="yes" />
+
+      <UpgradeVersion Property="NEWERVERSION_INSTALLED"
+                      OnlyDetect="yes"
+                      Minimum="$(var.PRODUCT_VERSION)"
+                      IncludeMinimum="no" />
+
+    </Upgrade>
+    <Icon Id="iconID" SourceFile="$(var.SOURCE_ICON)"/>
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFiles" Name="Program Files">
+        <Directory Id="INSTALL_LOCATION" Name="Cegeka">
+          <Component Id="cmp4994AA10ACA47235B6FDF7AEA24C42FD" Guid="{58F0CE1D-09C9-4695-9DF9-7D9877EBC121}">
+            <File Id="fil7FA42BD495D6E83AA70F0B9A78EE99FE" KeyPath="yes" Source="$(var.BASE_PATH)\Assemblies\Cegeka.Updater.Logic.dll" />
+          </Component>
+          <Component Id="cmpDA3460C9452372506A74ABA6B57CF659" Guid="{08F4F9C1-CF28-4EB2-9899-5B34E8D8F933}">
+            <File Id="filD8DD16D4CC3BC38C3259FC7EC6284E62" KeyPath="yes" Source="$(var.BASE_PATH)\Assemblies\Interop.WUApiLib.dll" />
+            <RegistryValue Root="HKCR" Key="CLSID\{13639463-00DB-4646-803D-528026140D88}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.UpdateCollectionClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{13639463-00DB-4646-803D-528026140D88}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{13639463-00DB-4646-803D-528026140D88}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{13639463-00DB-4646-803D-528026140D88}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{13639463-00DB-4646-803D-528026140D88}\InprocServer32" Name="Class" Value="WUApiLib.UpdateCollectionClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{13639463-00DB-4646-803D-528026140D88}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{13639463-00DB-4646-803D-528026140D88}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{13639463-00DB-4646-803D-528026140D88}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{317E92FC-1679-46FD-A0B5-F08914DD8623}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.InstallationAgentClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{317E92FC-1679-46FD-A0B5-F08914DD8623}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{317E92FC-1679-46FD-A0B5-F08914DD8623}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{317E92FC-1679-46FD-A0B5-F08914DD8623}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{317E92FC-1679-46FD-A0B5-F08914DD8623}\InprocServer32" Name="Class" Value="WUApiLib.InstallationAgentClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{317E92FC-1679-46FD-A0B5-F08914DD8623}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{317E92FC-1679-46FD-A0B5-F08914DD8623}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{317E92FC-1679-46FD-A0B5-F08914DD8623}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{4CB43D7F-7EEE-4906-8698-60DA1C38F2FE}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.UpdateSessionClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{4CB43D7F-7EEE-4906-8698-60DA1C38F2FE}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{4CB43D7F-7EEE-4906-8698-60DA1C38F2FE}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{4CB43D7F-7EEE-4906-8698-60DA1C38F2FE}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{4CB43D7F-7EEE-4906-8698-60DA1C38F2FE}\InprocServer32" Name="Class" Value="WUApiLib.UpdateSessionClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{4CB43D7F-7EEE-4906-8698-60DA1C38F2FE}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{4CB43D7F-7EEE-4906-8698-60DA1C38F2FE}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{4CB43D7F-7EEE-4906-8698-60DA1C38F2FE}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{5BAF654A-5A07-4264-A255-9FF54C7151E7}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.UpdateDownloaderClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{5BAF654A-5A07-4264-A255-9FF54C7151E7}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{5BAF654A-5A07-4264-A255-9FF54C7151E7}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{5BAF654A-5A07-4264-A255-9FF54C7151E7}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{5BAF654A-5A07-4264-A255-9FF54C7151E7}\InprocServer32" Name="Class" Value="WUApiLib.UpdateDownloaderClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{5BAF654A-5A07-4264-A255-9FF54C7151E7}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{5BAF654A-5A07-4264-A255-9FF54C7151E7}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{5BAF654A-5A07-4264-A255-9FF54C7151E7}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{650503CF-9108-4DDC-A2CE-6C2341E1C582}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.WebProxyClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{650503CF-9108-4DDC-A2CE-6C2341E1C582}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{650503CF-9108-4DDC-A2CE-6C2341E1C582}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{650503CF-9108-4DDC-A2CE-6C2341E1C582}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{650503CF-9108-4DDC-A2CE-6C2341E1C582}\InprocServer32" Name="Class" Value="WUApiLib.WebProxyClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{650503CF-9108-4DDC-A2CE-6C2341E1C582}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{650503CF-9108-4DDC-A2CE-6C2341E1C582}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{650503CF-9108-4DDC-A2CE-6C2341E1C582}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{72C97D74-7C3B-40AE-B77D-ABDB22EBA6FB}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.StringCollectionClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{72C97D74-7C3B-40AE-B77D-ABDB22EBA6FB}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{72C97D74-7C3B-40AE-B77D-ABDB22EBA6FB}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{72C97D74-7C3B-40AE-B77D-ABDB22EBA6FB}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{72C97D74-7C3B-40AE-B77D-ABDB22EBA6FB}\InprocServer32" Name="Class" Value="WUApiLib.StringCollectionClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{72C97D74-7C3B-40AE-B77D-ABDB22EBA6FB}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{72C97D74-7C3B-40AE-B77D-ABDB22EBA6FB}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{72C97D74-7C3B-40AE-B77D-ABDB22EBA6FB}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{B699E5E8-67FF-4177-88B0-3684A3388BFB}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.UpdateSearcherClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{B699E5E8-67FF-4177-88B0-3684A3388BFB}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{B699E5E8-67FF-4177-88B0-3684A3388BFB}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{B699E5E8-67FF-4177-88B0-3684A3388BFB}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{B699E5E8-67FF-4177-88B0-3684A3388BFB}\InprocServer32" Name="Class" Value="WUApiLib.UpdateSearcherClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{B699E5E8-67FF-4177-88B0-3684A3388BFB}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{B699E5E8-67FF-4177-88B0-3684A3388BFB}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{B699E5E8-67FF-4177-88B0-3684A3388BFB}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{BFE18E9C-6D87-4450-B37C-E02F0B373803}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.AutomaticUpdatesClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{BFE18E9C-6D87-4450-B37C-E02F0B373803}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{BFE18E9C-6D87-4450-B37C-E02F0B373803}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{BFE18E9C-6D87-4450-B37C-E02F0B373803}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{BFE18E9C-6D87-4450-B37C-E02F0B373803}\InprocServer32" Name="Class" Value="WUApiLib.AutomaticUpdatesClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{BFE18E9C-6D87-4450-B37C-E02F0B373803}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{BFE18E9C-6D87-4450-B37C-E02F0B373803}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{BFE18E9C-6D87-4450-B37C-E02F0B373803}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C01B9BA0-BEA7-41BA-B604-D0A36F469133}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.SystemInformationClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C01B9BA0-BEA7-41BA-B604-D0A36F469133}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C01B9BA0-BEA7-41BA-B604-D0A36F469133}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C01B9BA0-BEA7-41BA-B604-D0A36F469133}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C01B9BA0-BEA7-41BA-B604-D0A36F469133}\InprocServer32" Name="Class" Value="WUApiLib.SystemInformationClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C01B9BA0-BEA7-41BA-B604-D0A36F469133}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C01B9BA0-BEA7-41BA-B604-D0A36F469133}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C01B9BA0-BEA7-41BA-B604-D0A36F469133}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C2E88C2F-6F5B-4AAA-894B-55C847AD3A2D}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.WindowsUpdateAgentInfoClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C2E88C2F-6F5B-4AAA-894B-55C847AD3A2D}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C2E88C2F-6F5B-4AAA-894B-55C847AD3A2D}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C2E88C2F-6F5B-4AAA-894B-55C847AD3A2D}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C2E88C2F-6F5B-4AAA-894B-55C847AD3A2D}\InprocServer32" Name="Class" Value="WUApiLib.WindowsUpdateAgentInfoClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C2E88C2F-6F5B-4AAA-894B-55C847AD3A2D}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C2E88C2F-6F5B-4AAA-894B-55C847AD3A2D}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{C2E88C2F-6F5B-4AAA-894B-55C847AD3A2D}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{D2E0FE7F-D23E-48E1-93C0-6FA8CC346474}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.UpdateInstallerClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{D2E0FE7F-D23E-48E1-93C0-6FA8CC346474}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{D2E0FE7F-D23E-48E1-93C0-6FA8CC346474}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{D2E0FE7F-D23E-48E1-93C0-6FA8CC346474}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{D2E0FE7F-D23E-48E1-93C0-6FA8CC346474}\InprocServer32" Name="Class" Value="WUApiLib.UpdateInstallerClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{D2E0FE7F-D23E-48E1-93C0-6FA8CC346474}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{D2E0FE7F-D23E-48E1-93C0-6FA8CC346474}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{D2E0FE7F-D23E-48E1-93C0-6FA8CC346474}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{F8D253D9-89A4-4DAA-87B6-1168369F0B21}\InprocServer32\2.0.0.0" Name="Class" Value="WUApiLib.UpdateServiceManagerClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{F8D253D9-89A4-4DAA-87B6-1168369F0B21}\InprocServer32\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{F8D253D9-89A4-4DAA-87B6-1168369F0B21}\InprocServer32\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{F8D253D9-89A4-4DAA-87B6-1168369F0B21}\InprocServer32\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{F8D253D9-89A4-4DAA-87B6-1168369F0B21}\InprocServer32" Name="Class" Value="WUApiLib.UpdateServiceManagerClass" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{F8D253D9-89A4-4DAA-87B6-1168369F0B21}\InprocServer32" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{F8D253D9-89A4-4DAA-87B6-1168369F0B21}\InprocServer32" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="CLSID\{F8D253D9-89A4-4DAA-87B6-1168369F0B21}\InprocServer32" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{00440DD5-AE4A-3289-98E8-BB04C2C86478}\2.0.0.0" Name="Class" Value="WUApiLib.AutoDownloadMode" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{00440DD5-AE4A-3289-98E8-BB04C2C86478}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{00440DD5-AE4A-3289-98E8-BB04C2C86478}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{00440DD5-AE4A-3289-98E8-BB04C2C86478}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{051FA725-69B4-3A5A-87CE-34F899043DEC}\2.0.0.0" Name="Class" Value="WUApiLib.tagAutomaticUpdatesScheduledInstallationDay" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{051FA725-69B4-3A5A-87CE-34F899043DEC}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{051FA725-69B4-3A5A-87CE-34F899043DEC}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{051FA725-69B4-3A5A-87CE-34F899043DEC}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{0723462F-5A75-3A17-B3CC-F484895632F0}\2.0.0.0" Name="Class" Value="WUApiLib.tagAutomaticUpdatesPermissionType" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{0723462F-5A75-3A17-B3CC-F484895632F0}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{0723462F-5A75-3A17-B3CC-F484895632F0}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{0723462F-5A75-3A17-B3CC-F484895632F0}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{0E18BA31-AD00-3722-B85A-EAEAB093A52C}\2.0.0.0" Name="Class" Value="WUApiLib.DownloadPhase" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{0E18BA31-AD00-3722-B85A-EAEAB093A52C}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{0E18BA31-AD00-3722-B85A-EAEAB093A52C}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{0E18BA31-AD00-3722-B85A-EAEAB093A52C}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{1D5CCAAA-0320-3259-AC4A-72BB12C253D9}\2.0.0.0" Name="Class" Value="WUApiLib._RemotableHandle" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{1D5CCAAA-0320-3259-AC4A-72BB12C253D9}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{1D5CCAAA-0320-3259-AC4A-72BB12C253D9}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{1D5CCAAA-0320-3259-AC4A-72BB12C253D9}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2578A441-9BD3-3766-A3B0-C73A7E71DB83}\2.0.0.0" Name="Class" Value="WUApiLib.UpdateType" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2578A441-9BD3-3766-A3B0-C73A7E71DB83}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2578A441-9BD3-3766-A3B0-C73A7E71DB83}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2578A441-9BD3-3766-A3B0-C73A7E71DB83}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2A69C67B-594B-378E-8EB9-D6DE79E2F971}\2.0.0.0" Name="Class" Value="WUApiLib.InstallationRebootBehavior" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2A69C67B-594B-378E-8EB9-D6DE79E2F971}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2A69C67B-594B-378E-8EB9-D6DE79E2F971}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2A69C67B-594B-378E-8EB9-D6DE79E2F971}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2F3DB873-C2FE-3083-9FCB-C37F3CA4D6EB}\2.0.0.0" Name="Class" Value="WUApiLib.tagAutoDownloadMode" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2F3DB873-C2FE-3083-9FCB-C37F3CA4D6EB}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2F3DB873-C2FE-3083-9FCB-C37F3CA4D6EB}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{2F3DB873-C2FE-3083-9FCB-C37F3CA4D6EB}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{32DDE796-F766-303E-ABB9-35F37BAF649E}\2.0.0.0" Name="Class" Value="WUApiLib.AddServiceFlag" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{32DDE796-F766-303E-ABB9-35F37BAF649E}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{32DDE796-F766-303E-ABB9-35F37BAF649E}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{32DDE796-F766-303E-ABB9-35F37BAF649E}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{3D4E1ABC-8D21-37B3-B753-FCB9083C23AD}\2.0.0.0" Name="Class" Value="WUApiLib.OperationResultCode" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{3D4E1ABC-8D21-37B3-B753-FCB9083C23AD}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{3D4E1ABC-8D21-37B3-B753-FCB9083C23AD}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{3D4E1ABC-8D21-37B3-B753-FCB9083C23AD}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{4B8DD0E9-77D1-364D-8F50-B49EFBCF059E}\2.0.0.0" Name="Class" Value="WUApiLib.UpdateLockdownOption" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{4B8DD0E9-77D1-364D-8F50-B49EFBCF059E}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{4B8DD0E9-77D1-364D-8F50-B49EFBCF059E}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{4B8DD0E9-77D1-364D-8F50-B49EFBCF059E}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{52C19743-F0AC-3959-822B-62D34C4AAF5D}\2.0.0.0" Name="Class" Value="WUApiLib.UpdateServiceRegistrationState" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{52C19743-F0AC-3959-822B-62D34C4AAF5D}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{52C19743-F0AC-3959-822B-62D34C4AAF5D}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{52C19743-F0AC-3959-822B-62D34C4AAF5D}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{568B683B-C277-3491-BE2A-C95ED4317FED}\2.0.0.0" Name="Class" Value="WUApiLib.tagOperationResultCode" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{568B683B-C277-3491-BE2A-C95ED4317FED}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{568B683B-C277-3491-BE2A-C95ED4317FED}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{568B683B-C277-3491-BE2A-C95ED4317FED}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{57CB4C65-4B2A-3D22-BAC5-9899AA4D638B}\2.0.0.0" Name="Class" Value="WUApiLib.tagAutoSelectionMode" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{57CB4C65-4B2A-3D22-BAC5-9899AA4D638B}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{57CB4C65-4B2A-3D22-BAC5-9899AA4D638B}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{57CB4C65-4B2A-3D22-BAC5-9899AA4D638B}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{5CB4F85B-B9CD-349D-8175-3B585AB44447}\2.0.0.0" Name="Class" Value="WUApiLib.AutomaticUpdatesPermissionType" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{5CB4F85B-B9CD-349D-8175-3B585AB44447}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{5CB4F85B-B9CD-349D-8175-3B585AB44447}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{5CB4F85B-B9CD-349D-8175-3B585AB44447}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{6379543A-C172-34DA-9D4E-C19891021C56}\2.0.0.0" Name="Class" Value="WUApiLib.DeploymentAction" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{6379543A-C172-34DA-9D4E-C19891021C56}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{6379543A-C172-34DA-9D4E-C19891021C56}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{6379543A-C172-34DA-9D4E-C19891021C56}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{6C342C94-7AAC-3EFC-8E43-B2284B6327EA}\2.0.0.0" Name="Class" Value="WUApiLib.tagUpdateLockdownOption" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{6C342C94-7AAC-3EFC-8E43-B2284B6327EA}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{6C342C94-7AAC-3EFC-8E43-B2284B6327EA}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{6C342C94-7AAC-3EFC-8E43-B2284B6327EA}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{79F0D209-86D8-304E-9E35-7512CEEF9696}\2.0.0.0" Name="Class" Value="WUApiLib.tagInstallationImpact" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{79F0D209-86D8-304E-9E35-7512CEEF9696}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{79F0D209-86D8-304E-9E35-7512CEEF9696}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{79F0D209-86D8-304E-9E35-7512CEEF9696}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{7C0D4AC7-FB63-3397-881B-1A3FF537B774}\2.0.0.0" Name="Class" Value="WUApiLib.tagSearchScope" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{7C0D4AC7-FB63-3397-881B-1A3FF537B774}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{7C0D4AC7-FB63-3397-881B-1A3FF537B774}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{7C0D4AC7-FB63-3397-881B-1A3FF537B774}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{7D327EE2-08F5-3087-B235-761BD6A54231}\2.0.0.0" Name="Class" Value="WUApiLib.tagAutomaticUpdatesUserType" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{7D327EE2-08F5-3087-B235-761BD6A54231}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{7D327EE2-08F5-3087-B235-761BD6A54231}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{7D327EE2-08F5-3087-B235-761BD6A54231}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{80186F9F-BF36-32F3-9360-6DC8A0A80D75}\2.0.0.0" Name="Class" Value="WUApiLib.AutomaticUpdatesUserType" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{80186F9F-BF36-32F3-9360-6DC8A0A80D75}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{80186F9F-BF36-32F3-9360-6DC8A0A80D75}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{80186F9F-BF36-32F3-9360-6DC8A0A80D75}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{845BA7E7-22A9-3D81-AAF5-314A31A119EA}\2.0.0.0" Name="Class" Value="WUApiLib.UpdateOperation" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{845BA7E7-22A9-3D81-AAF5-314A31A119EA}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{845BA7E7-22A9-3D81-AAF5-314A31A119EA}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{845BA7E7-22A9-3D81-AAF5-314A31A119EA}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8623F797-A1CA-3BA8-8617-3C4E1183150B}\2.0.0.0" Name="Class" Value="WUApiLib.tagUpdateServiceRegistrationState" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8623F797-A1CA-3BA8-8617-3C4E1183150B}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8623F797-A1CA-3BA8-8617-3C4E1183150B}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8623F797-A1CA-3BA8-8617-3C4E1183150B}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{895B77DC-03D9-3C1B-BD62-59C1B5793142}\2.0.0.0" Name="Class" Value="WUApiLib.AutomaticUpdatesScheduledInstallationDay" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{895B77DC-03D9-3C1B-BD62-59C1B5793142}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{895B77DC-03D9-3C1B-BD62-59C1B5793142}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{895B77DC-03D9-3C1B-BD62-59C1B5793142}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8C3022F9-0640-36A2-8171-87F4D46AD7B5}\2.0.0.0" Name="Class" Value="WUApiLib.AutoSelectionMode" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8C3022F9-0640-36A2-8171-87F4D46AD7B5}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8C3022F9-0640-36A2-8171-87F4D46AD7B5}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8C3022F9-0640-36A2-8171-87F4D46AD7B5}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8E42FE89-7699-3FBF-AE92-4B3B1C351173}\2.0.0.0" Name="Class" Value="WUApiLib.tagUpdateOperation" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8E42FE89-7699-3FBF-AE92-4B3B1C351173}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8E42FE89-7699-3FBF-AE92-4B3B1C351173}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{8E42FE89-7699-3FBF-AE92-4B3B1C351173}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{96A924F1-41F1-3EAF-A456-14E014BAE468}\2.0.0.0" Name="Class" Value="WUApiLib.tagInstallationRebootBehavior" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{96A924F1-41F1-3EAF-A456-14E014BAE468}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{96A924F1-41F1-3EAF-A456-14E014BAE468}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{96A924F1-41F1-3EAF-A456-14E014BAE468}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{9BE41C46-2F0E-3536-B6C9-115A296AC33B}\2.0.0.0" Name="Class" Value="WUApiLib.tagDeploymentAction" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{9BE41C46-2F0E-3536-B6C9-115A296AC33B}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{9BE41C46-2F0E-3536-B6C9-115A296AC33B}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{9BE41C46-2F0E-3536-B6C9-115A296AC33B}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{A4F4E491-CFCE-3F5B-AA0E-234D54B46524}\2.0.0.0" Name="Class" Value="WUApiLib.UpdateServiceOption" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{A4F4E491-CFCE-3F5B-AA0E-234D54B46524}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{A4F4E491-CFCE-3F5B-AA0E-234D54B46524}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{A4F4E491-CFCE-3F5B-AA0E-234D54B46524}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{A9FB4C97-1CA2-3128-AA3B-5F3528B5318D}\2.0.0.0" Name="Class" Value="WUApiLib.tagUpdateType" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{A9FB4C97-1CA2-3128-AA3B-5F3528B5318D}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{A9FB4C97-1CA2-3128-AA3B-5F3528B5318D}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{A9FB4C97-1CA2-3128-AA3B-5F3528B5318D}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B6B15EE9-E6D8-38EE-8E90-2D80D394D6E5}\2.0.0.0" Name="Class" Value="WUApiLib.tagDownloadPriority" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B6B15EE9-E6D8-38EE-8E90-2D80D394D6E5}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B6B15EE9-E6D8-38EE-8E90-2D80D394D6E5}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B6B15EE9-E6D8-38EE-8E90-2D80D394D6E5}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B6E91852-B487-37B2-8395-4D79DC785C18}\2.0.0.0" Name="Class" Value="WUApiLib.AutomaticUpdatesNotificationLevel" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B6E91852-B487-37B2-8395-4D79DC785C18}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B6E91852-B487-37B2-8395-4D79DC785C18}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B6E91852-B487-37B2-8395-4D79DC785C18}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B7487901-186A-3BB5-AD53-54D5CDFD1E53}\2.0.0.0" Name="Class" Value="WUApiLib.tagUpdateExceptionContext" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B7487901-186A-3BB5-AD53-54D5CDFD1E53}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B7487901-186A-3BB5-AD53-54D5CDFD1E53}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B7487901-186A-3BB5-AD53-54D5CDFD1E53}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B9B02026-F979-3BD0-A8DE-CEF0F5E6A5E5}\2.0.0.0" Name="Class" Value="WUApiLib.tagDownloadPhase" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B9B02026-F979-3BD0-A8DE-CEF0F5E6A5E5}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B9B02026-F979-3BD0-A8DE-CEF0F5E6A5E5}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{B9B02026-F979-3BD0-A8DE-CEF0F5E6A5E5}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{C7A97A32-9A33-39E6-AD80-E31FF860BB0B}\2.0.0.0" Name="Class" Value="WUApiLib.tagAutomaticUpdatesNotificationLevel" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{C7A97A32-9A33-39E6-AD80-E31FF860BB0B}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{C7A97A32-9A33-39E6-AD80-E31FF860BB0B}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{C7A97A32-9A33-39E6-AD80-E31FF860BB0B}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{C82CF740-6484-3959-AB5A-7D738E4FFE13}\2.0.0.0" Name="Class" Value="WUApiLib.SearchScope" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{C82CF740-6484-3959-AB5A-7D738E4FFE13}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{C82CF740-6484-3959-AB5A-7D738E4FFE13}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{C82CF740-6484-3959-AB5A-7D738E4FFE13}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{CB1862F1-74B9-38BC-8662-C0E390E091BE}\2.0.0.0" Name="Class" Value="WUApiLib.DownloadPriority" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{CB1862F1-74B9-38BC-8662-C0E390E091BE}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{CB1862F1-74B9-38BC-8662-C0E390E091BE}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{CB1862F1-74B9-38BC-8662-C0E390E091BE}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{CE98AAE4-1D3D-3950-BDA8-270D531299E5}\2.0.0.0" Name="Class" Value="WUApiLib.UpdateExceptionContext" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{CE98AAE4-1D3D-3950-BDA8-270D531299E5}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{CE98AAE4-1D3D-3950-BDA8-270D531299E5}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{CE98AAE4-1D3D-3950-BDA8-270D531299E5}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{D95D2568-E3C8-371B-8419-5D12936A0618}\2.0.0.0" Name="Class" Value="WUApiLib.ServerSelection" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{D95D2568-E3C8-371B-8419-5D12936A0618}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{D95D2568-E3C8-371B-8419-5D12936A0618}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{D95D2568-E3C8-371B-8419-5D12936A0618}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{DEC9D15D-DBA2-3030-941D-CBF12E11CA77}\2.0.0.0" Name="Class" Value="WUApiLib.InstallationImpact" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{DEC9D15D-DBA2-3030-941D-CBF12E11CA77}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{DEC9D15D-DBA2-3030-941D-CBF12E11CA77}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{DEC9D15D-DBA2-3030-941D-CBF12E11CA77}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{E79B2A64-C469-3DA0-B82C-91651B37E798}\2.0.0.0" Name="Class" Value="WUApiLib.tagUpdateServiceOption" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{E79B2A64-C469-3DA0-B82C-91651B37E798}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{E79B2A64-C469-3DA0-B82C-91651B37E798}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{E79B2A64-C469-3DA0-B82C-91651B37E798}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{EC9D3448-A9A1-3EE3-91A8-1DDA7418E18F}\2.0.0.0" Name="Class" Value="WUApiLib.tagServerSelection" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{EC9D3448-A9A1-3EE3-91A8-1DDA7418E18F}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{EC9D3448-A9A1-3EE3-91A8-1DDA7418E18F}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{EC9D3448-A9A1-3EE3-91A8-1DDA7418E18F}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{ED195721-F3D1-3883-BF48-FDA6AA9A4176}\2.0.0.0" Name="Class" Value="WUApiLib.__MIDL_IWinTypes_0009" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{ED195721-F3D1-3883-BF48-FDA6AA9A4176}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{ED195721-F3D1-3883-BF48-FDA6AA9A4176}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{ED195721-F3D1-3883-BF48-FDA6AA9A4176}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{FAEBCE72-0636-3000-A991-F7411F1FFC13}\2.0.0.0" Name="Class" Value="WUApiLib.tagAddServiceFlag" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{FAEBCE72-0636-3000-A991-F7411F1FFC13}\2.0.0.0" Name="Assembly" Value="Interop.WUApiLib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{FAEBCE72-0636-3000-A991-F7411F1FFC13}\2.0.0.0" Name="RuntimeVersion" Value="v2.0.50727" Type="string" Action="write" />
+            <RegistryValue Root="HKCR" Key="Record\{FAEBCE72-0636-3000-A991-F7411F1FFC13}\2.0.0.0" Name="CodeBase" Value="file:///[#filD8DD16D4CC3BC38C3259FC7EC6284E62]" Type="string" Action="write" />
+          </Component>
+          <Component Id="cmpD8668FC08140349FB436F35006087383" Guid="{DA71CBFA-4B06-42D3-80A4-34EC25B01BDE}">
+            <File Id="filA4986F912103989D2017A75EDF02FED1" KeyPath="yes" Source="$(var.BASE_PATH)\Assemblies\log4net.dll" />
+          </Component>
+          <Component Id="cmp79A51231CAF2E34BBD13CDDB01D9379D" Guid="{C8CF5FED-9794-4E75-838C-EA8602392AF1}">
+            <File Id="fil8BA75EF13E29EFA3E02FD693EB3F40FF" KeyPath="yes" Source="$(var.BASE_PATH)\Assemblies\Microsoft.Practices.ServiceLocation.dll" />
+          </Component>
+          <Component Id="cmp37FDDF863D939F0954EEC847D754D7BE" Guid="{03F3320A-2EC9-4EC4-9C64-1F834B34F4DC}">
+            <File Id="fil52A310F0ECDDAA67B860323C4DC11591" KeyPath="yes" Source="$(var.BASE_PATH)\Assemblies\Microsoft.Practices.Unity.Configuration.dll" />
+          </Component>
+          <Component Id="cmp632DA03C5B6E3B60F9BCF4A5E3E66E7D" Guid="{B736D885-5147-48F5-89DD-8AD6B2D29C8E}">
+            <File Id="fil7BB5230D85E13B22E2A2C516F9EB23C4" KeyPath="yes" Source="$(var.BASE_PATH)\Assemblies\Microsoft.Practices.Unity.dll" />
+          </Component>
+          <Component Id="cmp6D62E93A61B52084AE69BC26D099653B" Guid="{AEDFAAD6-8BF2-480C-AE90-246D043CCE22}">
+            <File Id="filC4B92F945CFACC6BDB40FC4BBBE43B88" KeyPath="yes" Source="$(var.BASE_PATH)\Assemblies\Microsoft.Practices.Unity.Interception.Configuration.dll" />
+          </Component>
+          <Component Id="cmp28F6E112F021E004D51874B693E4C662" Guid="{C0F751F6-5B43-43F5-B8F1-20E838AB4EC2}">
+            <File Id="fil9DB5E3FD5C44F2C6A7CFA0CF9444EFF6" KeyPath="yes" Source="$(var.BASE_PATH)\Assemblies\Microsoft.Practices.Unity.Interception.dll" />
+          </Component>
+
+          <Component Id="cmpCB00FA9C8DB74B8E2E7C31010230CFBB" Guid="{5C043329-8E0F-46AC-A9FC-180FCBD925F2}">
+            <File Id="filC919D7F03AA8D64597F9C3D62104DE34" KeyPath="yes" Source="$(var.BASE_PATH)\Assemblies\Cegeka.Updater.Service.exe" />
+            <ServiceInstall Id="UpdaterService" Name="Cegeka.UpdaterService" Type="ownProcess" Vital="yes" DisplayName="Cegeka Updater Service" Description="Scheduled installations of Windows Updates" Start="auto" Account="LocalSystem" ErrorControl="ignore" Interactive="no" />
+            <ServiceControl Id="UpdaterService.StartService" Name="Cegeka.UpdaterService" Start="install" Stop="both" Remove="uninstall" Wait="no" />
+          </Component>
+          <Component Id="cmp9BCBFB44E57DDE10E5C217A75579C15E" Guid="{9FDBF9BC-6A13-42F7-8B29-C9AB2CF4A2DD}">
+            <File Id="fil69CDFA707DA220DEB73596DB9E72951C" KeyPath="yes" Source="$(var.BASE_PATH)\Assemblies\Cegeka.Updater.Service.exe.config" />
+          </Component>
+                    
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <Feature Id="DefaultFeature" Level="1">
+      <ComponentRef Id="cmp4994AA10ACA47235B6FDF7AEA24C42FD"/>
+      <ComponentRef Id="cmpDA3460C9452372506A74ABA6B57CF659"/>
+      <ComponentRef Id="cmpD8668FC08140349FB436F35006087383"/>
+      <ComponentRef Id="cmp79A51231CAF2E34BBD13CDDB01D9379D"/>
+      <ComponentRef Id="cmp37FDDF863D939F0954EEC847D754D7BE"/>
+      <ComponentRef Id="cmp632DA03C5B6E3B60F9BCF4A5E3E66E7D"/>
+      <ComponentRef Id="cmp6D62E93A61B52084AE69BC26D099653B"/>
+      <ComponentRef Id="cmp28F6E112F021E004D51874B693E4C662"/>
+      <ComponentRef Id="cmpCB00FA9C8DB74B8E2E7C31010230CFBB"/>
+      <ComponentRef Id="cmp9BCBFB44E57DDE10E5C217A75579C15E"/>
+    </Feature>
+
+    <?include Properties.wxi?>
+    <?include Conditions.wxi?>
+    <?include CustomActions.wxi?>
+    <?include InstallExecuteSequence.wxi ?>
+
+  </Product>
+</Wix>

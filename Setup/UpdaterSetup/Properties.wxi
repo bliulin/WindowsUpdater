@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <PropertyRef Id="NETFRAMEWORK35"/>
+  
+  <!-- Previous product version -->
+  <Property Id="PREVIOUS_PRODUCT_VERSION" Secure="yes">
+    <RegistrySearch Id="PreviousProductVersionSearch" Type="raw" Name="DisplayVersion"
+                    Root="HKLM" Key="$(var.UNINSTALL_REGISTRY_KEY)$(var.PRODUCT_ID)"  />
+  </Property>
+
+  <!-- Setup target platform - will be saved into the registry and used 
+       to prevent patches for a different architecture to be installed -->
+  <Property Id="TARGET_PLATFORM" Value="$(var.Platform)-$(var.PRODUCT_ID)" Secure="yes"/>
+
+  <Property Id="PREVIOUS_TARGET_PLATFORM" Secure="yes">
+    <RegistrySearch Id="SearchPreviousSetupBitness" Type="raw" Name="TargetPlatform"
+                    Root="HKLM" Key="Software\$(var.MANUFACTURER_NAME)\$(var.PRODUCT_FULL_NAME)"/>
+  </Property>
+
+  <Property Id="DEFAULT_INSTALL_LOCATION" Secure="yes"/>
+  <Property Id="INSTALL_LOCATION" Value="C:\CegekaUpdater"></Property>
+  <Property Id="INSTALL_DIR" Secure="yes"/>
+  <Property Id="INSTALL_DIR_REG" Secure="yes">
+    <RegistrySearch Id="SearchInstallDir" Type="raw" Name="InstallDir"
+                    Root="HKLM" Key="Software\$(var.MANUFACTURER_NAME)\$(var.PRODUCT_FULL_NAME)" />
+  </Property>
+
+  <Property Id="CUSTOMER_NAME" Secure="yes" Value="CUSTOMERNAME" />
+  <Property Id="GROUP_NAME" Secure="yes" Value="GROUPNAME" />
+  <Property Id="CONFIG_FILE_URL" Secure="yes" Value="http://localhost/config.xml" />
+  <Property Id="MONITORING_SERVICE_TEMPLATE_URL" Secure="yes" Value="https://212.113.88.143/remote_maintenance/?token=token&amp;reason=reason&amp;hostname={0}&amp;action=action" />
+  <Property Id="MONITORING_SERVICE_HOST" Secure="yes" Value="mon.cegeka.be:443" />
+  <Property Id="CONNECTION_STRING" Secure="yes" Value="Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;" />
+  
+  <Property Id="CUSTOM_ACTION_DATA"></Property>
+  <Property Id="TransientProperties0" Value="INSTALL_LOCATION;CUSTOMER_NAME;GROUP_NAME;CONFIG_FILE_URL;MONITORING_SERVICE_TEMPLATE_URL;MONITORING_SERVICE_HOST;CONNECTION_STRING" />
+
+</Include>

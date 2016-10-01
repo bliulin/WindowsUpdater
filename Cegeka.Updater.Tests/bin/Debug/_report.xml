@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfUpdateInstallationLogEntry xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2014-11-18T21:05:41.5915075Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2014-11-18T21:05:42.1945148Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2014-11-18T21:09:12.954329Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2014-11-18T21:09:13.4643718Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2014-11-18T21:19:56.5534059Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2014-11-18T21:19:56.5534059Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2014-11-18T21:42:08.7120797Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2014-11-18T21:42:08.7120797Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2014-11-18T22:21:09.2712794Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2014-11-18T22:21:09.2712794Z" />
+  <UpdateInstallationLogEntry kbid="123" status="Success" message="" date="2014-11-18T22:23:03.8207009Z" />
+  <UpdateInstallationLogEntry kbid="321" status="Failure" message="it failed." date="2014-11-18T22:23:03.8207009Z" />
+</ArrayOfUpdateInstallationLogEntry>

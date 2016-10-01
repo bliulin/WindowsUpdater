@@ -1,0 +1,2 @@
+msiexec -i UpdaterSetup.msi INSTALL_LOCATION="d:\DEV\Cegeka.Updater\_updater" CUSTOMER_NAME="My Customer" GROUP_NAME="Development" CONFIG_FILE_URL="http://localhost/config.xml" MONITORING_SERVICE_TEMPLATE_URL="https://212.113.88.143/remote_maintenance/?token=token&reason=reason&hostname={0}&action=action" MONITORING_SERVICE_HOST="mon.cegeka.be:443" CONNECTION_STRING="Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=myPassword;" /l*v log.txt
+

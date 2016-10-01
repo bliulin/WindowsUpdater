@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <!--Full list of actions: http://msdn.microsoft.com/en-us/library/windows/desktop/aa372038(v=vs.85).aspx -->
+  <InstallExecuteSequence>
+    <?include InstallCommonSequence.wxi ?>
+
+    <RemoveExistingProducts After="InstallInitialize" />
+
+    <Custom Action="DumpPropertiesToCAData" Before="InstallServices" Overridable="yes"><![CDATA[IS_INSTALLING OR IS_REPAIRING OR IS_MODIFYING]]></Custom>
+
+    <Custom Action="WriteConfiguration.SetProperty" Before="WriteConfiguration"><![CDATA[IS_INSTALLING OR IS_REPAIRING OR IS_MODIFYING]]></Custom>
+    <Custom Action="WriteConfiguration" Before="StartServices" Overridable ="yes"><![CDATA[IS_INSTALLING OR IS_REPAIRING OR IS_MODIFYING]]></Custom>
+    
+  </InstallExecuteSequence>
+</Include>

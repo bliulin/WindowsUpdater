@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <?define MANUFACTURER_FULL_NAME = "Cegeka DSA Nederland B.V."?>
+  <?define MANUFACTURER_NAME = "Cegeka"?>
+  <?define SOURCE_ICON = "Resources/logo.jpg"?>
+  <?define UNINSTALL_REGISTRY_KEY = "Software\Microsoft\Windows\CurrentVersion\Uninstall\" ?>
+
+  <!-- TODO: Add your product name, install folder name, version and guids-->
+  <!--Product settings-->
+
+  <?define PRODUCT_FULL_NAME = "Cegeka Update Service" ?>
+  <?define PRODUCT_VERSION = "1.0.1127.2"?>
+  <?define BASE_PATH = "..\..\..\"?>
+  <!-- Product code, brackets needed for registry search for property PREVIOUS_PRODUCT_VERSION-->
+  <?define PRODUCT_ID = "{34817446-e34c-417c-b531-29553d7818fe}"?>
+  <?define PRODUCT_UPGRADECODE = "{5fed3f87-4cdb-4928-8ecc-dea21438f7b4}"?>
+
+  <!--Source Directories/Files-->
+  <?define SOURCE_DIR_BASE = "" ?>
+  <?define SOURCE_FILE_CUSTOM_ACTIONS= "..\..\..\Assemblies\Cegeka.Updater.Setup.CustomActions.CA.dll" ?>
+  <?define OUTPUT_FOLDER= "..\_Output"?>
+  <?define SOURCE_FILE_SQL_SCRIPT= "" ?>
+
+</Include>

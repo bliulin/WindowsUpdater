@@ -1,0 +1,32 @@
+INFO 10 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 1 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 9 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 9 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 1 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+ERROR 3 Cegeka.Updater.Logic.UpdateController - Unexpected error occured.
+System.InvalidOperationException: There is an error in XML document (1, 11). ---> System.Net.WebException: The remote server returned an error: (500) Internal Server Error.
+   at System.Net.HttpWebRequest.GetResponse()
+   at System.Xml.XmlDownloadManager.GetNonFileStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlDownloadManager.GetStream(Uri uri, ICredentials credentials, IWebProxy proxy, RequestCachePolicy cachePolicy)
+   at System.Xml.XmlUrlResolver.GetEntity(Uri absoluteUri, String role, Type ofObjectToReturn)
+   at System.Xml.XmlTextReaderImpl.OpenAndPush(Uri uri)
+   at System.Xml.XmlTextReaderImpl.PushExternalEntityOrSubset(String publicId, String systemId, Uri baseUri, String entityName)
+   at System.Xml.XmlTextReaderImpl.DtdParserProxy_PushExternalSubset(String systemId, String publicId)
+   at System.Xml.XmlTextReaderImpl.DtdParserProxy.System.Xml.IDtdParserAdapter.PushExternalSubset(String systemId, String publicId)
+   at System.Xml.DtdParser.ParseExternalSubset()
+   at System.Xml.DtdParser.ParseInDocumentDtd(Boolean saveInternalSubset)
+   at System.Xml.DtdParser.Parse(Boolean saveInternalSubset)
+   at System.Xml.DtdParser.System.Xml.IDtdParser.ParseInternalDtd(IDtdParserAdapter adapter, Boolean saveInternalSubset)
+   at System.Xml.XmlTextReaderImpl.ParseDtd()
+   at System.Xml.XmlTextReaderImpl.ParseDoctypeDecl()
+   at System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   at System.Xml.XmlTextReaderImpl.Read()
+   at System.Xml.XmlTextReader.Read()
+   at System.Xml.XmlReader.MoveToContent()
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderCustomerConfiguration.Read6_CustomerConfiguration()
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, XmlDeserializationEvents events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader)
+   at Cegeka.Updater.Logic.Utils.Serialization`1.GetObjectFromXml(String xmlData) in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\Utils\Serialization.cs:line 16
+   at Cegeka.Updater.Logic.UpdateController.readCentralConfiguration() in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\UpdateController.cs:line 222
+   at Cegeka.Updater.Logic.UpdateController.Start() in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\UpdateController.cs:line 91

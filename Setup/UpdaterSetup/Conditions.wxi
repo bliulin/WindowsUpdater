@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+
+  <Condition Message="!(loc.AdministrativeRights)">Privileged</Condition>
+  <Condition Message="!(loc.CheckNewerVersionMessage)"><![CDATA[Installed OR NOT NEWERVERSION_INSTALLED]]></Condition>
+
+  <Condition Message="!(loc.NetFrameworkMissing)"><![CDATA[Installed OR NETFRAMEWORK35]]></Condition>
+
+</Include>

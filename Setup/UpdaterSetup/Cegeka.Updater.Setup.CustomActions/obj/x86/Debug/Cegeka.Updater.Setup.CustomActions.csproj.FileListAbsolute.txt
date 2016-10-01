@@ -1,0 +1,7 @@
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\UpdaterSetup\Cegeka.Updater.Setup.CustomActions\bin\Debug\Cegeka.Updater.Setup.CustomActions.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\UpdaterSetup\Cegeka.Updater.Setup.CustomActions\bin\Debug\Cegeka.Updater.Setup.CustomActions.CA.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\UpdaterSetup\Cegeka.Updater.Setup.CustomActions\bin\Debug\Cegeka.Updater.Setup.CustomActions.pdb
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\UpdaterSetup\Cegeka.Updater.Setup.CustomActions\bin\Debug\Microsoft.Deployment.WindowsInstaller.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\UpdaterSetup\Cegeka.Updater.Setup.CustomActions\bin\Debug\Microsoft.Deployment.WindowsInstaller.xml
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\UpdaterSetup\Cegeka.Updater.Setup.CustomActions\obj\x86\Debug\Cegeka.Updater.Setup.CustomActions.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\UpdaterSetup\Cegeka.Updater.Setup.CustomActions\obj\x86\Debug\Cegeka.Updater.Setup.CustomActions.pdb

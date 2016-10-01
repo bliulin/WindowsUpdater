@@ -1,0 +1,10 @@
+obj\Debug\..\..\..\\Assemblies\Microsoft.Practices.Unity.Configuration.dll
+obj\Debug\..\..\..\\Assemblies\Cegeka.Updater.Service.exe.config
+obj\Debug\..\..\..\\Assemblies\Microsoft.Practices.Unity.dll
+obj\Debug\..\..\..\\Assemblies\Cegeka.Updater.Logic.dll
+obj\Debug\..\..\..\\Assemblies\Microsoft.Practices.ServiceLocation.dll
+obj\Debug\..\..\..\\Assemblies\Microsoft.Practices.Unity.Interception.dll
+obj\Debug\..\..\..\\Assemblies\log4net.dll
+obj\Debug\..\..\..\\Assemblies\Microsoft.Practices.Unity.Interception.Configuration.dll
+obj\Debug\..\..\..\\Assemblies\Cegeka.Updater.Service.exe
+obj\Debug\..\..\..\\Assemblies\Interop.WUApiLib.dll

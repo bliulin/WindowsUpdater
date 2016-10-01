@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <Binary Id="CustomActions" SourceFile="$(var.SOURCE_FILE_CUSTOM_ACTIONS)"/>
+
+  <CustomAction Id="SetFirstInstall" Property="FirstInstall" Value="true" />
+  <CustomAction Id="SetUpgrading" Property="Upgrading" Value="true" />
+  <CustomAction Id="SetRemovingForUpgrade" Property="RemovingForUpgrade" Value="true" />
+  <CustomAction Id="SetMaintenance" Property="Maintenance" Value="true" />
+  <CustomAction Id="SetUninstalling" Property="Uninstalling" Value="true" />
+  <CustomAction Id="SetReinstall" Property="Repair" Value="true" />
+  <CustomAction Id="SetChangeFeatures" Property="ChangeFeatures" Value="true" />
+
+  <!--PROPERTIES INDICATING INSTALL TYPE-->
+  <CustomAction Id="SetIS_UNINSTALLING" Property="IS_UNINSTALLING" Value="1" />
+  <CustomAction Id="SetIS_REPAIRING" Property="IS_REPAIRING" Value="1"></CustomAction>
+  <CustomAction Id="SetIS_MODIFYING" Property="IS_MODIFYING" Value="1"></CustomAction>
+  <CustomAction Id="SetIS_UPGRADING" Property="IS_UPGRADING" Value="1"></CustomAction>
+
+  <SetProperty Id="IS_INSTALLING" Value="1" After="AppSearch"><![CDATA[NOT Installed AND NOT PATCH AND NOT REMOVE]]></SetProperty>
+  <SetProperty Id="WEBSITE_IP" Value="[WEBSITE_IP_REG]" After="AppSearch" >
+    <![CDATA[NOT WEBSITE_IP]]>
+  </SetProperty>
+  <SetProperty Id="USED_WEBSITE_IP" Value="[WEBSITE_IP]" After="AppSearch" >
+    <![CDATA[WEBSITE_IP]]>
+  </SetProperty>
+  <SetProperty Id="WEBSITE_PORT" Value="[WEBSITE_PORT_REG]" After="AppSearch" >
+    <![CDATA[NOT WEBSITE_PORT]]>
+  </SetProperty>
+  <SetProperty Id="USED_WEBSITE_PORT" Value="[WEBSITE_PORT]" After="AppSearch" >
+    <![CDATA[WEBSITE_PORT]]>
+  </SetProperty>
+  <CustomAction Id="SetIS_PATCHING" Property="IS_PATCHING" Value="1"></CustomAction>
+  <CustomAction Id="SetIS_UNINSTALLING_PATCH" Property="IS_UNINSTALLING_PATCH" Value="1"></CustomAction>
+  <CustomAction Id="SetIS_PATCHWORK" Property="IS_PATCHWORK" Value="1"></CustomAction>
+  <!--END PROPERTIES INDICATING INSTALL TYPE-->
+
+  <CustomAction Id="DumpPropertiesToCAData" BinaryKey="CustomActions" DllEntry="DumpPropertiesToCustomActionData" Impersonate="no" Execute="immediate" Return="check"/>
+
+  <CustomAction Id ="WriteConfiguration.SetProperty" Property="WriteConfiguration" Value="[CUSTOM_ACTION_DATA]"/>
+  <CustomAction Id ="WriteConfiguration" BinaryKey="CustomActions" DllEntry="ModifyConfigurationFile" Execute="deferred" Return="check" Impersonate="no" />
+
+
+</Include>

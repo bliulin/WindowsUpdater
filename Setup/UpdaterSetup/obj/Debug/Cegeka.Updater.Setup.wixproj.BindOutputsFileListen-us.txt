@@ -1,0 +1,2 @@
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\UpdaterSetup\bin\Debug\en-us\UpdaterSetup.msi
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\UpdaterSetup\bin\Debug\en-us\UpdaterSetup.wixpdb

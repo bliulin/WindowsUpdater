@@ -1,0 +1,12 @@
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\bin\Debug\CustomActionTests.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\bin\Debug\CustomActionTests.pdb
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\bin\Debug\Cegeka.Updater.Setup.CustomActions.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\bin\Debug\Moq.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\bin\Debug\Microsoft.Deployment.WindowsInstaller.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\bin\Debug\Cegeka.Updater.Setup.CustomActions.pdb
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\bin\Debug\Moq.xml
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\bin\Debug\Microsoft.Deployment.WindowsInstaller.xml
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\obj\Debug\CustomActionTests.csprojResolveAssemblyReference.cache
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\obj\Debug\CustomActionTests.dll
+D:\DEV\Cegeka.Updater\Cegeka.Updater\Setup\CustomActionTests\obj\Debug\CustomActionTests.pdb

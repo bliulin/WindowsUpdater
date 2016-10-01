@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CustomerConfigurations>
+  <CustomerConfiguration customerName="Cegeka">
+
+    <MaintenanceSchedule>
+      <TimeFrame groupName="Development" dayOfWeek="2" weekCount="5" startTime="08:00" endTime="23:00"/>
+      <TimeFrame groupName="Group2" dayOfWeek="2" weekCount="1" startTime="10:00" endTime="11:00"/>
+    </MaintenanceSchedule>
+
+    <ServerConfiguration>
+      <ExcludedServers>
+        <Name>Server3</Name>
+        <Name>Server6</Name>
+      </ExcludedServers>
+      <Servers>
+        <Server name="cegeka-api">
+          <ExcludedUpdates>
+            <UpdateId>2267602</UpdateId>
+            <UpdateId>2290967</UpdateId>
+          </ExcludedUpdates>
+        </Server>
+      </Servers>
+    </ServerConfiguration>
+
+  </CustomerConfiguration>
+</CustomerConfigurations>

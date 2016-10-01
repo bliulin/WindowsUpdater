@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+  <String Id="LANG">1033</String>
+
+  <String Id ="CheckNewerVersionMessage">A newer version of [ProductName] is already installed. Exiting installation.</String>
+  <String Id="CannotRun32bitSetupOn64OsMessage">You are attempting to run the 32-bit installer on a 64-bit version of Windows.</String>
+  <String Id="AdministrativeRights">You need to be an administrator to install this product!</String>
+  <String Id="NetFrameworkMissing">This application requires Microsoft .NET Framework 3.5 in order to run. Please install the .NET Framework and then run this installer again.</String>
+
+  <String Id="FeaturesError">At least one feature should be selected!</String>
+  <String Id ="CustomizeDlgTitle">{\WixUI_Font_Title}Features selection</String>
+  <String Id="DiskCostDlgDescription">The disk space required for the installation</String>
+
+  <String Id="msierrSecureObjectsFailedCreateSD" Overridable="yes">msierrSecureObjectsFailedCreateSD</String>
+  <String Id="msierrSecureObjectsFailedSet" Overridable="yes">msierrSecureObjectsFailedSe</String>
+  <String Id="msierrSecureObjectsUnknownType" Overridable="yes">msierrSecureObjectsUnknownType</String>
+
+</WixLocalization>

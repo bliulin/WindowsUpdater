@@ -1,0 +1,142 @@
+2014-11-19 00:26:10,847 [9] INFO  Cegeka.Updater.Service.Program (null) - Starting Cegeka Update Service Console host.
+2014-11-19 00:26:19,193 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - START runUpdateProcedure
+2014-11-19 00:26:21,013 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Machine name: CIOBANU
+2014-11-19 00:26:21,014 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Operating system: Microsoft Windows NT 6.3.9600.0
+2014-11-19 00:26:21,014 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - CLR version: 2.0.50727.8000
+2014-11-19 00:26:21,022 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Reading central configuration.
+2014-11-19 00:26:23,052 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - There are no excluded updates configured for this server.
+2014-11-19 00:26:23,054 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Testing if server is present in the exclusion list.
+2014-11-19 00:26:23,054 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Excluded servers: Server3 Server6 
+2014-11-19 00:26:23,055 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Server is present in exclusion list: False
+2014-11-19 00:26:23,086 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Checking for saved reports...
+2014-11-19 00:26:23,087 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Loading report...
+2014-11-19 00:26:23,088 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - No saved reports found.
+2014-11-19 00:26:23,088 [10] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Fetching available updates.
+2014-11-19 00:26:23,098 [10] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - Searcher server selection: ssDefault
+2014-11-19 00:26:23,104 [10] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - Searcher service ID: 00000000-0000-0000-0000-000000000000
+2014-11-19 00:26:59,557 [9] INFO  Cegeka.Updater.Service.Program (null) - Starting Cegeka Update Service Console host.
+2014-11-19 00:27:02,224 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - START runUpdateProcedure
+2014-11-19 00:27:02,225 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Machine name: CIOBANU
+2014-11-19 00:27:02,225 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Operating system: Microsoft Windows NT 6.3.9600.0
+2014-11-19 00:27:02,226 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - CLR version: 2.0.50727.8000
+2014-11-19 00:27:02,229 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Reading central configuration.
+2014-11-19 00:27:02,558 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - There are no excluded updates configured for this server.
+2014-11-19 00:27:02,559 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Testing if server is present in the exclusion list.
+2014-11-19 00:27:02,559 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Excluded servers: Server3 Server6 
+2014-11-19 00:27:02,560 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Server is present in exclusion list: False
+2014-11-19 00:27:05,014 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Checking for saved reports...
+2014-11-19 00:27:05,539 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Loading report...
+2014-11-19 00:27:08,806 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - No saved reports found.
+2014-11-19 00:27:12,522 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Fetching available updates.
+2014-11-19 00:27:12,538 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - Searcher server selection: ssDefault
+2014-11-19 00:27:12,549 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - Searcher service ID: 00000000-0000-0000-0000-000000000000
+2014-11-19 00:28:58,437 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Writing event log and monitoring API call.
+2014-11-19 00:29:01,405 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Installing updates.
+2014-11-19 00:29:03,473 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - START InstallUpdates
+2014-11-19 00:29:06,474 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - Downloading the following updates:
+2014-11-19 00:29:08,251 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) -   KB = '2645410', Title = 'Security Update for Microsoft Visual Studio 2010 Service Pack 1 (KB2645410)'
+2014-11-19 00:29:08,252 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) -   KB = '2546951', Title = 'Microsoft SQL Server 2008 Service Pack 3 (KB2546951)'
+2014-11-19 00:29:32,359 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - KB='2645410', Title='Security Update for Microsoft Visual Studio 2010 Service Pack 1 (KB2645410)' can request user input and it will not be installed.
+2014-11-19 00:29:35,331 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - KB='2645410', Title='Security Update for Microsoft Visual Studio 2010 Service Pack 1 (KB2645410)' was not installed because: Update can request user input and it will not be installed.
+2014-11-19 00:29:41,402 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - KB='2546951', Title='Microsoft SQL Server 2008 Service Pack 3 (KB2546951)' was in the list of available updates but it was not downloaded.
+2014-11-19 00:29:44,157 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - Installing the following updates:
+2014-11-19 00:29:49,458 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - No updates to install.
+2014-11-19 00:29:50,709 [6] DEBUG Cegeka.Updater.Logic.Installation.UpdateClient (null) - END InstallUpdates
+2014-11-19 00:29:59,309 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - START Installation report
+2014-11-19 00:29:59,975 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Result code: orcNotStarted
+2014-11-19 00:30:00,462 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Reboot required: False
+2014-11-19 00:30:00,885 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Update log:
+2014-11-19 00:30:06,806 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Update log:
+2014-11-19 00:30:25,973 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - KB ID: 2645410
+Status: NotAttempted
+Time: 11/18/2014 10:29:35 PM
+Message: Update can request user input and it will not be installed.
+
+2014-11-19 00:30:34,949 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - KB ID: 2546951
+Status: NotAttempted
+Time: 11/18/2014 10:29:41 PM
+Message: Update was not downloaded.
+
+2014-11-19 00:31:27,389 [6] DEBUG Cegeka.Updater.Logic.Schedule.RetryScheduler (null) - START action 'Commit' with retry.
+2014-11-19 00:31:30,938 [6] DEBUG Cegeka.Updater.Logic.Schedule.RetryScheduler (null) - Attempt #1
+2014-11-19 00:32:43,259 [6] ERROR Cegeka.Updater.Logic.Schedule.RetryScheduler (null) - System.Data.SqlClient.SqlException: Cannot open database "Reporting1" requested by the login. The login failed.
+Login failed for user 'CIOBANU\TestUser'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Cegeka.Updater.Logic.Reporting.SqlStatusReporter.Commit() in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\Reporting\SqlStatusReporter.cs:line 69
+   at Cegeka.Updater.Logic.Schedule.RetryScheduler.Execute(Func`1 action) in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\Schedule\RetryScheduler.cs:line 46
+2014-11-19 00:33:00,148 [6] DEBUG Cegeka.Updater.Logic.Schedule.RetryScheduler (null) - Attempt #2
+2014-11-19 00:33:28,322 [6] ERROR Cegeka.Updater.Logic.Schedule.RetryScheduler (null) - System.Data.SqlClient.SqlException: Cannot open database "Reporting1" requested by the login. The login failed.
+Login failed for user 'CIOBANU\TestUser'.
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   at System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at System.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject, Boolean withFailover)
+   at System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   at System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   at System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   at System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Cegeka.Updater.Logic.Reporting.SqlStatusReporter.Commit() in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\Reporting\SqlStatusReporter.cs:line 69
+   at Cegeka.Updater.Logic.Schedule.RetryScheduler.Execute(Func`1 action) in d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Logic\Schedule\RetryScheduler.cs:line 46
+2014-11-19 00:33:44,707 [6] DEBUG Cegeka.Updater.Logic.Schedule.RetryScheduler (null) - Waiting 30 seconds between retries...
+2014-11-19 00:34:03,631 [6] DEBUG Cegeka.Updater.Logic.Schedule.RetryScheduler (null) - END action 'Commit' with retry: success = False after 4 attempts.
+2014-11-19 00:34:37,237 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Writing event log: Failed to write installation report in the database.
+2014-11-19 00:34:49,538 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Saving report to disk...
+2014-11-19 00:35:03,495 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Report log was saved to disk: d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Service\bin\Debug\_report.xml
+2014-11-19 00:36:10,293 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Saving report to disk...
+2014-11-19 00:36:46,943 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Report log was saved to disk: d:\DEV\Cegeka.Updater\Cegeka.Updater\Cegeka.Updater.Service\bin\Debug\_report.xml
+2014-11-19 00:36:52,206 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Finished reporting installation status.
+2014-11-19 00:36:57,566 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - END Installation report
+2014-11-19 00:37:04,708 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - FINISH runUpdateProcedure
+2014-11-19 00:37:17,323 [9] INFO  Cegeka.Updater.Service.Program (null) - Starting Cegeka Update Service Console host.
+2014-11-19 00:37:20,567 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - START runUpdateProcedure
+2014-11-19 00:37:20,569 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Machine name: CIOBANU
+2014-11-19 00:37:20,569 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Operating system: Microsoft Windows NT 6.3.9600.0
+2014-11-19 00:37:20,569 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - CLR version: 2.0.50727.8000
+2014-11-19 00:37:20,572 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Reading central configuration.
+2014-11-19 00:37:21,184 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - There are no excluded updates configured for this server.
+2014-11-19 00:37:21,186 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Testing if server is present in the exclusion list.
+2014-11-19 00:37:21,186 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Excluded servers: Server3 Server6 
+2014-11-19 00:37:21,187 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Server is present in exclusion list: False
+2014-11-19 00:37:23,095 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Checking for saved reports...
+2014-11-19 00:37:23,501 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Loading report...
+2014-11-19 00:37:31,453 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Found saved reports, saving to database...
+2014-11-19 00:37:33,373 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Update log:
+2014-11-19 00:37:35,813 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - KB ID: 2645410
+Status: NotAttempted
+Time: 11/18/2014 10:29:35 PM
+Message: Update can request user input and it will not be installed.
+
+2014-11-19 00:37:45,701 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - KB ID: 2546951
+Status: NotAttempted
+Time: 11/18/2014 10:29:41 PM
+Message: Update was not downloaded.
+
+2014-11-19 00:37:54,803 [6] DEBUG Cegeka.Updater.Logic.Schedule.RetryScheduler (null) - START action 'Commit' with retry.
+2014-11-19 00:37:54,805 [6] DEBUG Cegeka.Updater.Logic.Schedule.RetryScheduler (null) - Attempt #1
+2014-11-19 00:38:07,874 [6] DEBUG Cegeka.Updater.Logic.Schedule.RetryScheduler (null) - Execution was successful.
+2014-11-19 00:38:10,606 [6] DEBUG Cegeka.Updater.Logic.Schedule.RetryScheduler (null) - END action 'Commit' with retry: success = True after 1 attempts.
+2014-11-19 00:38:27,095 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Deleted reports.
+2014-11-19 00:38:30,884 [6] DEBUG Cegeka.Updater.Logic.UpdateController (null) - Finished reporting installation status.

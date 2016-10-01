@@ -1,0 +1,4 @@
+INFO 7 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+INFO 9 Cegeka.Updater.Service.Program - Starting Cegeka Update Service Console host.
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - No maintenance timeframe is configured for group 'Development'
+DEBUG 6 Cegeka.Updater.Logic.UpdateController - Going idle - Not within maintenance timeframe.

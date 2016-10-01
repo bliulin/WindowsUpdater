@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <FindRelatedProducts Before="AppSearch" />
+  <Custom Action="SetFirstInstall" After="FindRelatedProducts">
+    NOT Installed AND NOT OLDERVERSION_BEINGUPGRADED AND NOT NEWERVERSION_INSTALLED
+  </Custom>
+  <Custom Action="SetUpgrading" After="SetFirstInstall">
+    OLDERVERSION_BEINGUPGRADED AND NOT (REMOVE="ALL")
+  </Custom>
+  <Custom Action="SetUninstalling" After="SetUpgrading">
+    Installed AND (REMOVE="ALL") AND NOT (OLDERVERSION_BEINGUPGRADED OR UPGRADINGPRODUCTCODE)
+  </Custom>
+  <Custom Action="SetMaintenance" After="SetUninstalling">
+    Installed AND NOT Upgrading AND NOT Uninstalling AND NOT UPGRADINGPRODUCTCODE
+  </Custom>
+  <Custom Action="SetReinstall" After="SetMaintenance">
+    (Installed AND NOT Upgrading AND NOT Uninstalling AND NOT UPGRADINGPRODUCTCODE) AND REINSTALL
+  </Custom>
+  <Custom Action="SetChangeFeatures" After="SetMaintenance">
+    (Installed AND NOT Upgrading AND NOT Uninstalling AND NOT UPGRADINGPRODUCTCODE) AND NOT REINSTALL
+  </Custom>
+
+  <!--SETTING PROPERTIES FOR INSTALL TYPE-->
+  <Custom Action="SetIS_UNINSTALLING" After="AppSearch"><![CDATA[NOT IS_UNINSTALLING AND REMOVE~="ALL"]]></Custom>
+  <Custom Action="SetIS_MODIFYING" After="AppSearch"><![CDATA[NOT IS_MODIFYING AND NOT IS_INSTALLING AND (ADDLOCAL OR REMOVE) AND NOT REINSTALL AND REMOVE <> "ALL" AND NOT UPGRADINGPRODUCTCODE]]></Custom>
+
+  <Custom Action="SetIS_PATCHING" Before="SetIS_PATCHWORK"><![CDATA[PATCH]]></Custom>
+  <Custom Action="SetIS_UNINSTALLING_PATCH" Before="SetIS_PATCHWORK"><![CDATA[MSIPATCHREMOVE]]></Custom>
+  <Custom Action="SetIS_PATCHWORK" Before="LaunchConditions"><![CDATA[IS_PATCHING OR IS_UNINSTALLING_PATCH]]></Custom>
+  <Custom Action="SetIS_REPAIRING" After="SetIS_PATCHWORK"><![CDATA[NOT IS_REPAIRING AND NOT IS_INSTALLING AND NOT REMOVE AND NOT IS_PATCHWORK]]></Custom>
+
+  <!--END SETTING PROPERTIES FOR INSTALL TYPE-->
+  
+  <AppSearch Before="LaunchConditions" />
+
+</Include>
